@@ -1,0 +1,22 @@
+.header {
+    background-image: -webkit-linear-gradient(top left, rgba($color-light-blue, 0.8), rgba($color-dark-blue, 0.8)), url(../img/corina-ardeleanu-39335.jpg);
+    background-size: cover;
+    background-position: top;
+    height: 95vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    position: relative;
+
+    hr {
+        border-bottom-color: $color-white;
+    }
+
+    &__header-text {
+        text-align: center;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+
+}

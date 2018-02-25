@@ -1,0 +1,64 @@
+body {
+    font-family: 'Catamaran', sans-serif;
+    padding: 1.5rem;
+    font-weight: 400;
+    color: $color-light-grey;
+}
+
+.main-header {
+    color: whitesmoke;
+    text-transform: uppercase;
+
+    .main--heading {
+        font-weight: 400;
+        font-size: 6rem;
+        letter-spacing: 2rem;
+        display: block;
+        animation: moveInRight 1s ease-out;
+    }
+
+    .sub--heading {
+        display: block;
+        font-weight: 600;
+        font-size: 1.8rem;
+        letter-spacing: 1rem;
+        animation: moveInLeft 1s ease-out;
+
+    }
+
+}
+
+.heading-secondary{
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    display: inline-block;
+    background-image:linear-gradient(to left,rgb(55, 66, 250),$color-light-blue);
+    -webkit-background-clip:text;
+    color: transparent;
+    transition: all .2s;
+    
+    &:hover{
+        transform: skewX(15deg) skewY(2deg);
+    }
+}
+
+.heading-tertiory{
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+}
+
+.font-medium{
+    font-size: $default-font-size;
+    font-weight: 500;
+    
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+}
+
+
+

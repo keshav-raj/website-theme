@@ -1,0 +1,237 @@
+.card{
+     perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 50rem;
+    
+    
+    
+    &__side{
+        
+    height: 50rem;
+    transition: all .8s ease;  
+    position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: .1rem 1.5rem 4rem rgba(0,0,0,0.8);
+        
+        
+        &--front{
+             
+            
+            &-1{
+               background-color: white;
+            } 
+            
+            &-2{
+               background-color: white;
+            } 
+            
+            &-3{
+               background-color: white;
+            }
+        }
+        
+        &--back{
+            transform: rotateY(180deg);
+            
+            
+            &-1{
+                 background: linear-gradient(to right bottom, $color-light-orange,rgb(253, 121, 168),rgb(232, 67, 147));
+            }
+                
+            &-2{
+                 background: linear-gradient(to right bottom, $color-light-purple,$color-light-blue,rgb(129, 236, 236));
+            }
+            
+            &-3{
+                 background: linear-gradient(to right bottom, $color-light-green,$color-light-blue,$color-light-purple);
+            }
+        }
+    }
+   
+   
+    
+    &:hover &__side--front{
+        transform: rotateY(-180deg);
+    }    
+    &:hover &__side--back{
+        transform: rotateY(0);
+    }
+    
+    &__picture{
+        height: 23rem;
+        background-blend-mode: screen;
+        background-size: cover;
+        background-position: center;
+       
+    
+         -webkit-clip-path: polygon(0 0, 100% 0, 100% 91%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 91%, 0 100%);
+      
+        &--1{
+              background-image: linear-gradient(to right bottom, $color-light-orange,$color-dark-red),
+                  url(../img/corina-ardeleanu-39335.jpg);
+        }
+        &--2{
+             background-image: linear-gradient(to right bottom, $color-light-purple,$color-light-blue),
+                  url(../img/corina-ardeleanu-39335.jpg);
+        }
+        &--3{
+              background-image: linear-gradient(to right bottom, $color-light-green,$color-light-blue,$color-light-purple),
+                  url(../img/corina-ardeleanu-39335.jpg);
+        }
+    }
+    
+    &__heading{
+        font-size: 3rem;
+        font-weight: 500;
+        text-align: right;
+        color: white;
+        text-transform: uppercase;
+        position: absolute;
+        top: 12.2rem;
+        right:1rem;
+        width: 70%;
+        z-index: 2;
+        
+    
+    }
+
+    &__heading-span{
+        padding: 0rem 3rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        
+        
+        &--1{
+              background-image:linear-gradient(to right bottom,
+                  rgba($color-light-orange,.85),
+                  rgba($color-light-red,.85))
+        } 
+        
+        &--2{
+              background-image:linear-gradient(to right bottom,
+                  rgba($color-light-purple,.85),
+                  rgba($color-light-blue,.85))
+        } 
+        
+        &--3{
+              background-image:linear-gradient(to right bottom,
+                  rgba($color-light-green,.85),
+                  rgba($color-light-blue,.85), rgba($color-light-purple,.85));
+        }
+    }
+    
+    &__details{
+        ul{
+            list-style: none;
+            margin: 0 auto;
+            text-align: center;
+            width: 80%;
+            padding: 2rem;
+            
+            li{
+                
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+                
+                &:not(:last-child){
+                    border-bottom: 1px solid rgb(223, 230, 233);
+                }
+                
+            }
+        }
+    }
+    
+    
+    &-block{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+    
+    &__pricebox{
+        color: white;
+        
+        
+        &-priceonly{
+            text-transform: uppercase;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+        &-pricevalue{
+            font-size: 6rem;
+            font-weight: 500;
+        }
+        
+        
+    }
+//    &__button-big{
+//        width: 60%;
+//        font-size: 1.5rem;
+//    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

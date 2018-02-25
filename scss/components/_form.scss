@@ -1,0 +1,95 @@
+.form {
+
+    &-group:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &-group {
+        transition: all .5s;
+    }
+
+    &-input {
+        font-size: 1.5rem;
+        display: block;
+        width: 90%;
+        font-family: inherit;
+        color: inherit;
+        padding: .5rem 1rem;
+        border: none;
+        background-color: transparent;
+        border-bottom: 2px solid $color-light-blue;
+        transition: all .5s ease;
+
+        &:focus {
+            outline: none;
+            border-bottom: 3px solid $color-light-green;
+            transform: scale(1.05);
+        }
+
+        &:invalid {
+            border-bottom: 3px solid $color-light-orange;
+        }
+    }
+
+    &-label {
+        margin-left: 1rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        display: block;
+        transition: all .3s ease;
+
+
+    }
+
+    &-input:placeholder-shown + &-label {
+        opacity: 0;
+        transform: translateY(-3rem);
+        visibility: hidden;
+    }
+    
+     &__radio-group {
+        width: 49%;
+        display: inline-block;
+    }
+
+    &__radio-input {
+        display: none;
+    }
+    
+    &__radio-label {
+        font-size: 1.5rem;
+        cursor: pointer;
+        position: relative;
+        padding-left: 4.5rem;
+    }
+
+    &__radio-button {
+        height: 3rem;
+        width: 3rem;
+        border: 5px solid $color-light-blue;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: -.4rem;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 1.3rem;
+            width: 1.3rem;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-light-blue;
+            opacity: 0;
+            transition: opacity .2s;
+        }
+    }
+
+    &__radio-input:checked ~ &__radio-label &__radio-button::after {
+        opacity: 1;
+    }
+}

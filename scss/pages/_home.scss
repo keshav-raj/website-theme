@@ -1,0 +1,51 @@
+.section-about{
+    background-color: $color-bg-grey;
+   padding: 20rem 0;
+    margin-top: -15vh;
+}
+.section-features{
+    background-image: -webkit-linear-gradient(top left, rgba($color-light-blue, 0.8), rgba($color-dark-blue, 0.8)), url(../img/taj-mahal-3132348_1920.jpg);
+    background-size: cover;
+    background-position: top;
+    height: 70rem;
+    font-size: 1.5rem;
+}
+
+.section-cards{
+    background-color: $color-bg-grey;
+   padding: 20rem 0 10rem 0;
+    margin-top: -6rem;
+}
+.section-story{ 
+    position: relative;
+    padding: 15rem 0;
+    
+}
+
+.section-book{
+    background-image: linear-gradient(to right bottom,$color-dark-blue,$color-dark-purple,$color-light-blue);
+    padding: 15rem 0;
+}
+
+.book{
+    background: linear-gradient(105deg,$color-bg-white 0% ,rgba($color-bg-white,0.7) 50%, transparent 50%),url(../img/taj-mahal-3132348_1920.jpg);
+    background-size: cover;
+    height: 50rem;
+    border-radius: 3px;
+    box-shadow: 0 2.5rem 4rem rgba(0,0,0,0.5);
+    
+    &__form{
+        width: 50%;
+        padding: 5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+

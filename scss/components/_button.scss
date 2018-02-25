@@ -1,0 +1,115 @@
+.button{
+    
+&:link,
+&:visited,
+& {
+    text-transform: uppercase;
+        text-decoration: none;
+        padding: 1rem 6rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .5s;
+        position: relative;
+        font-size: 1.5rem;
+}
+    
+     &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, .3);
+        
+         &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, .3);
+
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+        font-size: 1.6rem;
+    }
+  &--white {
+        background-color: $color-white;
+        color: $color-text-grey;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &--blue {
+        background-color: $color-light-blue;
+        color: $color-white;
+
+        &::after {
+            background-color: $color-light-blue;
+        }
+    }
+    &-animated {
+        animation: moveInUp .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+}
+
+.btn-text{
+    &:link,
+    &:visited,
+    &{
+        
+    font-size: $default-font-size;
+    text-decoration: none;
+    color: $color-light-blue;
+    border-bottom: 1px solid $color-light-blue;
+    padding: 5px;
+    transition: all .2s;
+    display: inline-block;
+    
+    
+    }
+    
+  
+    &:hover{
+        background-color: $color-light-blue;
+        color: whitesmoke;
+        box-shadow: 0 .3rem 5rem rgba(0,0,0,.5);
+        transform: translateY(-3px);
+        
+    }
+    
+      &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 .2rem 5rem rgba(0,0,0,.5);
+    }
+    
+    
+}
+
+.sub-btn{
+    border: none;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
